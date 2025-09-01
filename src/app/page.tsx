@@ -10,7 +10,7 @@ interface Service {
   description: string;
 }
 
-// Données des massages avec la mise à jour pour le Soin Signature
+// Données des massages
 const massagesData: (Service & { imageUrl: string })[] = [
     { 
         id: 1, 
@@ -28,16 +28,14 @@ const massagesData: (Service & { imageUrl: string })[] = [
         description: "Idéal pour soulager les tensions musculaires profondes et favoriser la récupération après l'effort.", 
         imageUrl: "https://i.postimg.cc/ZRsGxc0c/nb-gpt.png" 
     },
-    // --- SECTION MODIFIÉE ---
     { 
         id: 3, 
         name: "Soin Signature Zénith", 
-        duration: 90, // Modifié
-        price: 13000, // Modifié
-        description: "Notre soin le plus complet. Une immersion profonde dans le bien-être, alliant des manœuvres expertes et des techniques ancestrales pour une relaxation absolue.", // Modifié
+        duration: 90,
+        price: 13000,
+        description: "Notre soin le plus complet. Une immersion profonde dans le bien-être, alliant des manœuvres expertes et des techniques ancestrales pour une relaxation absolue.",
         imageUrl: "https://images.unsplash.com/photo-1542848285-f1588b447173?q=80&w=800" 
     },
-    // -----------------------
 ];
 
 export default function Home() {
@@ -60,11 +58,13 @@ export default function Home() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
             <div className="md:w-1/2">
               <div className="relative w-full aspect-square max-h-[600px] rounded-xl overflow-hidden shadow-lg">
-                <Image src="https://i.postimg.cc/DfJvYJFZ/Gemini-Generated-Image-fgw95lfgw95lfgw9.png" alt="Photo de Anthony Bolo, masseur ayurvédique" fill style={{ objectFit: "cover" }} />
+                <Image src="https://i.postimg.cc/DfJvYJFZ/Gemini-Generated-Image-fgw95lfgw95lfgw9.png" alt="Photo de Anthony, masseur ayurvédique" fill style={{ objectFit: "cover" }} />
               </div>
             </div>
             <div className="md:w-1/2">
-              <h2 className="text-5xl font-serif mb-6">Anthony Bolo, Votre Praticien</h2>
+              {/* --- LIGNE MODIFIÉE --- */}
+              <h2 className="text-5xl font-serif mb-6">Anthony, Votre Praticien</h2>
+              {/* -------------------- */}
               <h3 className="text-xl font-semibold mb-4 text-zenith-primary">Ma Philosophie</h3>
               <p className="text-gray-700 leading-relaxed mb-4">Le massage ayurvédique n’est pas seulement une technique de relaxation, c’est une véritable philosophie de vie. Héritée de l’Ayurveda, science millénaire indienne, cette pratique considère l’être humain dans sa globalité : corps, esprit et énergie.</p>
               <h3 className="text-xl font-semibold mb-4 text-zenith-primary">Parcours & Certifications</h3>
