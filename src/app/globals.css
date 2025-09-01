@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lissage pour un défilement doux lors du clic sur les ancres de navigation */
+html {
+  scroll-behavior: smooth;
+}
